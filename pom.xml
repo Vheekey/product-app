@@ -12,7 +12,7 @@
 	<artifactId>crud</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>crud</name>
-	<description>First crud project with Spring Boot</description>
+	<description>Manage Products and Employees</description>
 	<url/>
 	<licenses>
 		<license/>
