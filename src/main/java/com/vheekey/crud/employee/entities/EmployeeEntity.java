@@ -1,5 +1,6 @@
 package com.vheekey.crud.employee.entities;
 
+import com.vheekey.crud.employee.enums.Teams;
 import jakarta.persistence.*;
 
 @Entity
@@ -14,8 +15,13 @@ public class EmployeeEntity {
 
     @Column(name = "email", unique = true)
     private String email;
+
     private String password;
-    private String team;
+
+    private boolean isActive = true;
+
+    @Enumerated(EnumType.STRING)
+    private Teams team;
 
     public Integer getId() {
         return id;
@@ -49,11 +55,20 @@ public class EmployeeEntity {
         this.password = password;
     }
 
-    public String getTeam() {
+    public Teams getTeam() {
         return team;
     }
 
-    public void setTeam(String team) {
+    public void setTeam(Teams team) {
+//        this.team = Teams.valueOf(team);
         this.team = team;
+    }
+
+    public boolean isActive() {
+        return isActive;
+    }
+
+    public void setActive(boolean active) {
+        isActive = active;
     }
 }
