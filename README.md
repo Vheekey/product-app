@@ -1,2 +1,2 @@
 # product-app
-Manage Products
+This is a basic springboot application that manages products and employees
